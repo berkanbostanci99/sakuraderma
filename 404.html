@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sakura Derma — dermatoloji asistanları ve uzmanları için bilimsel kaynaklı klinik skorlama hesaplayıcıları." />
+  <meta name="theme-color" content="#0f766e" />
+  <title>Sakura Derma — Dermatoloji Skorlama Araçları</title>
+  <link rel="icon" href="./assets/favicon.svg?v=1.2.0-r5" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/app.css?v=1.2.0-r5" />
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Sakura Derma ana sayfa">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img"><g fill="currentColor"><ellipse cx="32" cy="14" rx="8" ry="14"/><ellipse cx="49" cy="27" rx="8" ry="14" transform="rotate(72 49 27)"/><ellipse cx="42" cy="48" rx="8" ry="14" transform="rotate(144 42 48)"/><ellipse cx="22" cy="48" rx="8" ry="14" transform="rotate(216 22 48)"/><ellipse cx="15" cy="27" rx="8" ry="14" transform="rotate(288 15 27)"/><circle cx="32" cy="32" r="6"/></g></svg>
+      </span>
+      <span><strong>Sakura</strong> Derma</span>
+    </a>
+    <nav class="top-actions" aria-label="Üst menü">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Tema değiştir" title="Tema değiştir">◐</button>
+      <a class="text-link" href="#about">Hakkında</a>
+    </nav>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Skorlama araçları">
+      <div class="side-title">Skorlar</div>
+      <nav id="scoreNav" class="score-nav"></nav>
+      <div class="side-note">
+        <strong>Yerel hesaplama</strong>
+        <span>Girilen değerler tarayıcınızdan dışarı gönderilmez.</span>
+      </div>
+    </aside>
+
+    <main id="main" class="main">
+      <section id="home" class="hero page-section active" data-page="home">
+        <div class="hero-copy">
+          <span class="eyebrow">Klinik skorlama • hızlı • kaynaklı</span>
+          <h1>Dermatoloji skorlarını daha hızlı ve daha tutarlı hesaplayın.</h1>
+          <p>Sakura Derma; sık kullanılan 18 dermatolojik skorlama aracını tek, sade ve mobil uyumlu arayüzde toplar. Hesaplamalar tarayıcı içinde, anlık ve formüle dayalı yapılır.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#pasi">PASI ile başla</a>
+            <a class="btn ghost" href="#references">Kaynak yaklaşımı</a>
+          </div>
+          <div class="hero-badges" aria-label="Özellikler">
+            <span>18 araç</span><span>Offline çalışır</span><span>Kaynakça içerir</span><span>GitHub Pages uyumlu</span>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Skor özeti">
+          <div class="mini-stat"><strong>0–72</strong><span>PASI / EASI</span></div>
+          <div class="mini-stat"><strong>0–103</strong><span>SCORAD</span></div>
+          <div class="mini-stat"><strong>0–42</strong><span>UAS7</span></div>
+          <div class="mini-stat"><strong>0–360</strong><span>BPDAI aktivite</span></div>
+        </div>
+      </section>
+
+      <section id="toolsGrid" class="page-section active" data-page="home">
+        <div class="section-heading">
+          <div><span class="eyebrow">Hızlı erişim</span><h2>Skorlama araçları</h2></div>
+          <label class="search-box">Araç ara<input id="toolSearch" type="search" placeholder="örn. pemfigus, atopik dermatit..." autocomplete="off" /></label>
+        </div>
+        <div id="toolCards" class="tool-grid"></div>
+      </section>
+
+      <section id="calculatorHost" class="page-section" data-page="calculator" aria-live="polite"></section>
+
+      <section id="references" class="page-section info-page" data-page="references">
+        <span class="eyebrow">Bilimsel yaklaşım</span>
+        <h1>Kaynak ve eşik politikası</h1>
+        <p>Her hesaplayıcının altında, formülün ve varsa şiddet sınıflamasının dayandığı yayınlar ayrı ayrı listelenir. Bir skor için birden fazla eşik sistemi bulunuyorsa, Sakura Derma tek bir eşik sistemini “evrensel standart” gibi sunmaz; kullanılan eşik kaynağını sonuç alanında belirtir.</p>
+        <div class="notice info"><strong>Önemli:</strong> Skorlar klinik değerlendirmenin yerini tutmaz. Özellikle SCORTEN, SJS/TEN gibi acil ve yaşamı tehdit eden durumlarda yalnızca prognostik bir araçtır.</div>
+      </section>
+
+      <section id="about" class="page-section info-page" data-page="about">
+        <span class="eyebrow">Sakura Derma</span>
+        <h1>Hakkında</h1>
+        <p>Bu sürüm, dermatoloji asistanları ve uzmanları için eğitim ve klinik dokümantasyon desteği amacıyla hazırlanmış, tamamen statik bir web uygulamasıdır. Sunucu, kullanıcı hesabı, çerez veya hasta kimlik bilgisi gerektirmez.</p>
+        <p>Uygulama tıbbi tanı veya tedavi önerisi üretmez. Hesaplayıcı sonuçları yalnızca girilen klinik bulguların ilgili yayınlarda tanımlanan matematiksel skora dönüştürülmesidir.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div><strong>Sakura Derma</strong> <span id="buildVersion">v1.2.0-r5</span> <span class="footer-credit">• Berkan K. Bostancı tarafından kişisel kullanım amacıyla oluşturulmuştur.</span></div>
+    <div>Bilimsel kaynaklı dermatoloji hesaplayıcıları • Klinik karar desteği yerine geçmez.</div>
+  </footer>
+
+  <noscript><div class="noscript">Bu hesaplayıcıların çalışması için JavaScript etkin olmalıdır.</div></noscript>
+  <script src="./assets/scores.js?v=1.2.0-r5"></script>
+  <script src="./assets/app.js?v=1.2.0-r5"></script>
+</body>
+</html>
